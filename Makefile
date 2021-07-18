@@ -1,8 +1,12 @@
-BUILD_DIR=build
+BUILD_DIR=antlr_build
 
-ANTLR_OPTS=-Dlanguage=JavaScript
+ANTLR_BIN ?= antlr
+ANTLR_OPTS = -Dlanguage=JavaScript
 
-
-$(BUILD_DIR)/vcdParser.js: vcd.g vcdlexer.g
+$(BUILD_DIR)/vcdParser.js: vcd.g vcdLexer.g
 	mkdir -p $(@D)
-	antlr -o $(BUILD_DIR) $(ANTLR_OPTS) $^
+	$(ANTLR_BIN) -o $(BUILD_DIR) $(ANTLR_OPTS) $^
+
+.PHONY: clean
+clean:
+	rm -rf ./build
