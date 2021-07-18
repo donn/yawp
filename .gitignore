@@ -1,0 +1,6 @@
+/build
+/.antlr
+/node_modules
+*.err
+*.json
+!package.json

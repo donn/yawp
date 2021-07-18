@@ -1,0 +1,11 @@
+{
+  "name": "yawp",
+  "version": "0.0.1",
+  "description": "A VCD Parser with ANTLRs",
+  "main": "index.js",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "antlr4": "^4.9.2"
+  },
+  "type": "module"
+}
