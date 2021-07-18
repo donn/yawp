@@ -109,5 +109,6 @@ export default class Listener extends VCDListener {
         }
 
         this.result.top = top;
+        this.result.finalTime = this.currentTime; 
     }
 }
